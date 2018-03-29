@@ -1,0 +1,31 @@
+<div class="container" *ngIf="ifAdding">
+  <div class="row">
+    <form>
+      <div >
+        <label>Name: </label>
+          <input #name type="text" name="name">
+      </div>
+      <div >
+        <label>Brewery: </label>
+          <input #brewery type="text" name="brewery">
+      </div>
+      <div >
+        <label>Type: </label>
+          <input #type type="text" name="type">
+      </div>
+      <div >
+        <label>Alcohol Content: </label>
+          <input #alcoholContent type="text" name="alcoholContent">
+      </div>
+      <div >
+        <label>Price: </label>
+          <input #price type="text" name="price">
+      </div>
+      <div >
+        <label>Pints: </label>
+          <input #pints type="text" name="pints">
+      </div>
+      <button type="button" (click)="createKeg(name.value, brewery.value, type.value, alcoholContent.value, price.value, pints.value)">Add Keg!</button>
+    </form>
+  </div>
+</div>

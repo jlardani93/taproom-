@@ -1,0 +1,31 @@
+<div class="container" *ngIf="activeEditKeg">
+  <div class="row">
+    <form>
+      <div >
+        <label>Name: </label>
+        <input #name type="text" name="name" value="{{activeEditKeg.beer.name}}">
+      </div>
+      <div >
+        <label>Brewery: </label>
+        <input #brewery type="text" name="brewery" value="{{activeEditKeg.beer.brand}}">
+      </div>
+      <div >
+        <label>Type: </label>
+        <input #type type="text" name="type" value="{{activeEditKeg.beer.type}}">
+      </div>
+      <div >
+        <label>Alcohol Content: </label>
+        <input #alcoholContent type="text" name="alcoholContent" value="{{activeEditKeg.beer.alcoholContent}}">
+      </div>
+      <div >
+        <label>Price: </label>
+        <input #price type="text" name="price" value="{{activeEditKeg.price}}">
+      </div>
+      <div >
+        <label>Pints: </label>
+        <input #pints type="text" name="pints" value="{{activeEditKeg.pints}}">
+      </div>
+      <button type="button" (click)="editKeg(name.value, brewery.value, type.value, alcoholContent.value, price.value, pints.value)">Submit Edits!</button>
+    </form>
+  </div>
+</div>
